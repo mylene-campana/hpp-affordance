@@ -87,7 +87,8 @@ namespace hpp {
 				explicit SupportOperation (const double margin = 0.3, const double nbTriMargin = 0.3,
 																		const double minArea = 0.05, 
                                     const char* affordanceName = "Support"):
-                                    OperationBase(margin, nbTriMargin, minArea, affordanceName) {}
+				  //OperationBase(margin, nbTriMargin, minArea, affordanceName) {} // TRY REPLACE BY PIERRE
+				  OperationBase(margin, 0.02, minArea, affordanceName) {}
 				/// The implementation of the requirement function for Support affordances
 				/// overrides the virtual function in class OperationBase.
 				/// \param nromal Normal vector of the tested triangle.
@@ -112,7 +113,8 @@ namespace hpp {
       explicit LeanOperation (const double margin = 0.3, const double nbTriMargin = 0.3,
 																const double minArea = 0.05,
                                 const char* affordanceName = "Lean"):
-                                OperationBase(margin, nbTriMargin, minArea, affordanceName) {}
+	//OperationBase(margin, nbTriMargin, minArea, affordanceName) {} // TRY REPLACE BY PIERRE
+                                OperationBase(margin, 0.02, minArea, affordanceName) {}
 				/// The implementation of the requirement function for Lean affordances
 				/// overrides the virtual function in class OperationBase.
 				/// \param nromal Normal vector of the tested triangle.
